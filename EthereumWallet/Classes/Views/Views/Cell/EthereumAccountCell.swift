@@ -108,7 +108,14 @@ class EthereumAccountCell: UICollectionViewCell {
     
     @objc func ethereumButtonTouched(sender: EthereumButton) {
         if let model  = sender.model {
-            EthereumRouter.default.push(model.router.urlPattern, context: model.context)
+            switch model.router {
+            case .receive:
+                EthereumRouter.default.present(model.router.urlPattern, context: model.context)
+            case .buy, .send:
+                EthereumRouter.default.push(model.router.urlPattern, context: model.context)
+            default:
+                break
+            }
         }
     }
 }
