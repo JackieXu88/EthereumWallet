@@ -15,6 +15,13 @@ class EthereumReceiveViewController: UIViewController {
     
     private var viewModel = EthereumReceiveViewModel()
     
+    private lazy var titleLabel: UILabel = {
+        let titleLabel = UILabel()
+        titleLabel.text = EthereumString.Home.receive.localizedString
+        titleLabel.textAlignment = .center
+        return titleLabel
+    }()
+    
     private lazy var contentStackView: UIStackView = {
         let contentStackView = UIStackView()
         contentStackView.spacing = 20
@@ -42,7 +49,7 @@ class EthereumReceiveViewController: UIViewController {
     }()
     
     var subViews: [UIView] {
-        return [qrCodeImageView, qrCodeDescLabel]
+        return [titleLabel, qrCodeImageView, qrCodeDescLabel]
     }
     
     override func viewDidLoad() {
@@ -53,7 +60,6 @@ class EthereumReceiveViewController: UIViewController {
     }
     
     private func setupSubViews() {
-        title = EthereumString.Home.receive.localizedString
         view.backgroundColor = .ETHColors.primaryBackgroundColor
         view.addSubview(contentStackView)
         subViews.forEach {
@@ -69,8 +75,12 @@ class EthereumReceiveViewController: UIViewController {
             $0.right.equalTo(-50)
         }
         
+        titleLabel.snp.makeConstraints {
+            $0.height.equalTo(30)
+        }
+        
         qrCodeImageView.snp.makeConstraints {
-            $0.left.top.right.equalToSuperview()
+            $0.left.right.equalToSuperview()
             $0.height.equalTo(qrCodeImageView.snp.width)
         }
         
