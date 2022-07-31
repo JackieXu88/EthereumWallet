@@ -1,0 +1,61 @@
+PODS:
+  - BigInt (5.0.0)
+  - EthereumWallet (0.1.0):
+    - RxCocoa
+    - RxSwift
+    - SnapKit
+    - SVProgressHUD
+    - URLNavigator
+    - web3.swift
+  - GenericJSON (2.0.1)
+  - RxCocoa (6.5.0):
+    - RxRelay (= 6.5.0)
+    - RxSwift (= 6.5.0)
+  - RxRelay (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxSwift (6.5.0)
+  - secp256k1.swift (0.1.4)
+  - SnapKit (5.6.0)
+  - SVProgressHUD (2.2.5)
+  - URLNavigator (2.4.1)
+  - web3.swift (1.2.0):
+    - BigInt (~> 5.0.0)
+    - GenericJSON (~> 2.0)
+    - secp256k1.swift (~> 0.1)
+
+DEPENDENCIES:
+  - EthereumWallet (from `../`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - BigInt
+    - GenericJSON
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - secp256k1.swift
+    - SnapKit
+    - SVProgressHUD
+    - URLNavigator
+    - web3.swift
+
+EXTERNAL SOURCES:
+  EthereumWallet:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  BigInt: 74b4d88367b0e819d9f77393549226d36faeb0d8
+  EthereumWallet: b65ab57d2262f10c1549a28366f8bf9da03613f1
+  GenericJSON: a6e74e2c457f8693caab08e0eafde7d97e6666de
+  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+  secp256k1.swift: a7e7a214f6db6ce5db32cc6b2b45e5c4dd633634
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  URLNavigator: 9e277a422a5c131a3e37970c2558e0e866cc22bd
+  web3.swift: 5b1c6275d92cfa60e4365159057bd63a83dfb9bd
+
+PODFILE CHECKSUM: 73fe4317c61724f67c5ae9dd296bf91c2036629e
+
+COCOAPODS: 1.11.3

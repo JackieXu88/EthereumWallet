@@ -1,0 +1,20 @@
+// generate wallet
+"ACCOUNT_TEXTFIELD_PLACEHOLDER" = "Please input account name";
+"PASSWORD_PLACEHOLDER" = "Please input password";
+"GENERATE_WALLET_ADDRESS" = "Generate Ethereum Address";
+"CREATE_WALLET_FAILED" = "Generate ethereum address failed, please try again!";
+"CREATE_WALLET_SUCCESSED" = "Generate ethereum address successed!";
+
+// common
+"NETWORK_ERROR" = "Network error!";
+
+// Home
+"HOME_TITLE" = "Wallet";
+"RECEIVE_TITLE" = "Receive";
+"BUY_TITLE" = "Buy";
+"SEND_TITLE" = "Send";
+
+// Receive
+"QRCODE_DESC" = "Scan address to receive payment";
+"COPY_TITLE" = "Copy";
+"COPY_SUCCESSED" = "Copy address successed!";

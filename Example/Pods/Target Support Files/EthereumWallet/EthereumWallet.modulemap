@@ -1,0 +1,6 @@
+framework module EthereumWallet {
+  umbrella header "EthereumWallet-umbrella.h"
+
+  export *
+  module * { export * }
+}

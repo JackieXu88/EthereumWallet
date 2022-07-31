@@ -1,0 +1,34 @@
+--swiftversion 5.3
+--disable blankLinesAroundMark,unusedArguments,sortedImports,redundantReturn, wrapMultilineStatementBraces,extensionAccessControl,preferKeyPath
+--wrapparameters after-first
+--wrapcollections before-first
+--typeattributes same-line
+--funcattributes same-line
+--varattributes same-line
+--trimwhitespace nonblank-lines
+--commas inline
+#--exclude **/Pods
+
+
+ # rules
+# --disable isEmpty
+# --disable andOperator
+# --disable wrapMultilineStatementBraces
+# --disable enumNamespaces
+
+# format options
+# --indent 2
+# --closingparen same-line
+# --commas inline
+# --comments indent
+# --decimalgrouping 3,5
+# --exponentcase lowercase
+# --exponentgrouping disabled
+# --extensionacl on-declarations
+# --fractiongrouping disabled
+# --ifdef no-indent
+# --importgrouping testable-top
+# --operatorfunc no-space
+# --nospaceoperators ..<, ...
+# --selfrequired validate
+# --stripunusedargs closure-only

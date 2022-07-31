@@ -1,0 +1,61 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '13.0'
+use_frameworks!
+inhibit_all_warnings!
+
+
+target 'EthereumWallet_Example' do
+  pod 'EthereumWallet', :path => '../'
+end
+
+post_install do |installer|
+  
+  add_build_configurations(installer.pods_project)
+  
+  installer.pods_project.targets.each do |target|
+    add_build_configurations(target)
+  end
+  
+  workspace_path = 'EthereumWallet.xcworkspace'
+  workspace = Xcodeproj::Workspace.new_from_xcworkspace(workspace_path)
+  workspace.file_references.each do |file_reference|
+    project = Xcodeproj::Project.open(file_reference.path)
+    add_build_configurations(project)
+    add_release_to_active_compilation_conditions(project)
+    project.save()
+  end
+  
+end
+
+# Add "build configurations"
+def add_build_configurations(project)
+  project.build_configurations.each do |config|
+    config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+    config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = 'arm64'
+    if config.name == 'Debug'
+      config.build_settings['SWIFT_ACTIVE_COMPILATION_CONDITIONS'] = 'DEBUG'
+    elsif config.name == 'TestFlight'
+      config.build_settings['SWIFT_ACTIVE_COMPILATION_CONDITIONS'] = 'TESTFLIGHT'
+    elsif config.name == 'Release'
+      config.build_settings['SWIFT_ACTIVE_COMPILATION_CONDITIONS'] = 'RELEASE'
+    end
+    end
+  end
+
+
+
+  # 添加"RELEASE"到"Active Compialtion Conditions"
+  def add_release_to_active_compilation_conditions(project)
+    # 修改 Swift Active Compilation Condidations 的设置，设成 RELEASE
+    project.build_configurations.each do |config|
+      if config.name == 'Release'
+        config.build_settings['SWIFT_ACTIVE_COMPILATION_CONDITIONS'] = 'RELEASE'
+      elsif config.name == 'Preproduction'
+        config.build_settings['SWIFT_ACTIVE_COMPILATION_CONDITIONS'] = 'PREPRODUCTION'
+      elsif config.name == 'Staging'
+        config.build_settings['SWIFT_ACTIVE_COMPILATION_CONDITIONS'] = 'STAGING'
+      end
+    end
+  end
+

@@ -1,0 +1,51 @@
+{
+  "name": "EthereumWallet",
+  "version": "0.1.0",
+  "summary": "A short description of #{pod_name}.",
+  "swift_versions": "5.0",
+  "cocoapods_version": ">= 1.11.0",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/jackie.xu/EthereumWallet",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "jackie.xu": "jackie.xu@planetart.cn"
+  },
+  "source": {
+    "git": "https://github.com/jackie.xu/EthereumWallet.git",
+    "tag": "EthereumWallet-0.1.0"
+  },
+  "platforms": {
+    "ios": "13.0"
+  },
+  "static_framework": true,
+  "source_files": "EthereumWallet/Classes/**/*.swift",
+  "resource_bundles": {
+    "EthereumWallet": [
+      "EthereumWallet/Assets/**/*"
+    ]
+  },
+  "dependencies": {
+    "web3.swift": [
+
+    ],
+    "URLNavigator": [
+
+    ],
+    "RxSwift": [
+
+    ],
+    "RxCocoa": [
+
+    ],
+    "SnapKit": [
+
+    ],
+    "SVProgressHUD": [
+
+    ]
+  },
+  "swift_version": "5.0"
+}
