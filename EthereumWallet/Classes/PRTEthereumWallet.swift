@@ -11,6 +11,7 @@ public class EthereumWallet {
     
     public init() {
         EtherenumWalletRouter.regist()
+        debugPrint("xxxx")
     }
     
     public var rootViewController: UIViewController {
